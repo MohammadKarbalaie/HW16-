@@ -34,7 +34,7 @@ const UsersList = () => {
   if (isError) return <div>Error loading users</div>;
 
   return (
-    <div className='w-[1420px] mx-auto h-[85vh] overflow-y-auto'>
+    <div className='w-[1420px] mx-auto h-auto'>
       <h1 className="text-2xl font-bold mb-4">Users List</h1>
       <ul>
         {data?.pages.map((page, pageIndex) => (
