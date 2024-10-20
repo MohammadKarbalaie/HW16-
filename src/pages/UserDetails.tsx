@@ -20,18 +20,18 @@ const UserDetails = () => {
     () => fetchUserPosts(userId!)
   );
 
-  if (isUserLoading || isPostsLoading) return <div>Loading...</div>;
-  if (isUserError || isPostsError) return <div>Error loading user or posts</div>;
+  if (isUserLoading || isPostsLoading) return <div className='text-white'>Loading...</div>;
+  if (isUserError || isPostsError) return <div className='text-white'>Error loading user or posts</div>;
 
   return (
     <div className="user-details">
-      <h1 className="text-2xl font-bold mb-4">{user.firstName} {user.lastName}</h1>
+      <h1 className="flex items-center gap-4 text-2xl font-bold mb-4"><img src={user.image} alt={user.firstName} /><p className='text-white'>{user.firstName} {user.lastName}</p></h1>
 
       {/* list user posts*/}
-      <h2 className="text-xl mb-2">Posts by {user.firstName}:</h2>
+      <h2 className="text-xl mb-2 text-white">Posts by {user.firstName}:</h2>
       <ul>
         {posts.map((post:IPost) => (
-          <li key={post.id}>
+          <li key={post.id} className='bg-white rounded-xl'>
             <PostCard post={post} /> 
           </li>
         ))}

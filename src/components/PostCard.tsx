@@ -7,7 +7,7 @@ interface PostCardProps {
 
 const PostCard = ({ post }: PostCardProps) => {
   return (
-    <div className="p-4 my-4 border rounded-lg shadow-sm hover:bg-gray-100">
+    <div className="p-4 my-4 border rounded-lg bg-white shadow-sm hover:bg-gray-300">
       <Link to={`/posts/${post.id}`}>
         <h3 className="font-semibold text-lg">{post.title}</h3>
       </Link>

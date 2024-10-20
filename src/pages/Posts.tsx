@@ -8,12 +8,12 @@ const Posts = () => {
   const [page, setPage] = useState(0);
   const { data, isLoading, isError } = useQuery(['posts', page], () => fetchPosts(page));
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error loading posts</div>;
+  if (isLoading) return <div className='text-white'>Loading...</div>;
+  if (isError) return <div className='text-white'>Error loading posts</div>;
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Posts</h1>
+      <h1 className="text-2xl font-bold mb-4 text-white">Posts</h1>
       <ul>
         {data.posts.map((post: IPost) => (
           <li key={post.id} className='py-2 w-[500px]'>

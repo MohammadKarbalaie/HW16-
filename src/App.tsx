@@ -15,7 +15,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <div className='w-[1440px] mx-auto'>
+        <div className='w-[1440px] mx-auto bg-[#17223e] '>
           <Navbar />
           <main className="p-4">
             <Routes>

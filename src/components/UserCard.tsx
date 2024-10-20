@@ -9,7 +9,7 @@ const UserCard = ({ user }: UserCardProps) => {
   return (
     <li>
       <Link to={`/users/${user.id}`}>
-        <div className="w-96 flex items-center justify-center p-4 border rounded-lg shadow-sm hover:bg-gray-100">
+        <div className="w-96 flex mt-4 bg-white items-center justify-center p-4 border rounded-lg shadow-sm hover:bg-gray-300">
           <div className='w-10'>
             <img src={user.image} alt={user.lastName} />
           </div>

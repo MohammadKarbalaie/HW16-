@@ -1,7 +1,7 @@
 const Home = () => {
     return (
       <section className="py-52">
-        <div className="container">
+        <div className="container bg-white">
           <div className='flex items-center justify-center rounded-2xl bg-[url("https://www.shadcnblocks.com/images/block/circles.svg")] bg-cover bg-center px-8 py-20 text-center md:p-20'>
             <div className="mx-auto max-w-screen-md">
               <h1 className="mb-4 text-balance text-3xl font-semibold md:text-5xl">
