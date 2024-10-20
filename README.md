@@ -10,7 +10,7 @@ Template :
 
 - [@template Comments component](https://www.creative-tim.com/twcomponents/component/comment-1)
 
-- - [@template footer component](https://www.designtoolshub.com/tailwind-css/footer-generator)
+- [@template footer component](https://www.designtoolshub.com/tailwind-css/footer-generator)
 ________________________________________________________________________________________________________________________________________________________________________________________
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
