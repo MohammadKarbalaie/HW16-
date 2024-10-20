@@ -1,13 +1,8 @@
 import { useState } from 'react';
 import { useQuery } from 'react-query';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { fetchPosts } from '../api/post.api';      
+import PostCard from '../components/PostCard';
 import { IPost } from '../types';
-
-const fetchPosts = async (page: number) => {
-  const { data } = await axios.get(`https://dummyjson.com/posts?limit=10&skip=${page * 10}`);
-  return data;
-};
 
 const Posts = () => {
   const [page, setPage] = useState(0);
@@ -21,13 +16,8 @@ const Posts = () => {
       <h1 className="text-2xl font-bold mb-4">Posts</h1>
       <ul>
         {data.posts.map((post: IPost) => (
-          <li key={post.id}>
-            <Link to={`/posts/${post.id}`}>
-              <div className="p-4 border rounded-lg shadow-sm hover:bg-gray-100">
-                <h2 className="font-semibold">{post.title}</h2>
-                <p className="truncate">{post.body}</p>
-              </div>
-            </Link>
+          <li key={post.id} className='py-2 w-[500px]'>
+            <PostCard post={post} /> 
           </li>
         ))}
       </ul>
