@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite HW16-
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -10,7 +10,11 @@ Template :
 
 - [@template Comments component](https://www.creative-tim.com/twcomponents/component/comment-1)
 
-- [@template footer component](https://www.designtoolshub.com/tailwind-css/footer-generator)
+- [@template_Home-component](https://tailwindflex.com/@mdadul/premium-saas-hero-section)
+
+- [@template logo](https://www.ucraft.com/ai-logo-generator)
+
+- [@template footer component](https://tailwindflex.com/@pagedone/horizontal-footer-with-dark-version)
 ________________________________________________________________________________________________________________________________________________________________________________________
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
