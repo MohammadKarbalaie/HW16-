@@ -13,7 +13,7 @@ const Comments = ({ postId }: CommentsProps) => {
 
   const { data: comments, isLoading, isError, refetch } = useQuery(
     ['comments', postId],
-    () => fetchPostComments(postId),
+    () => fetchPostComments(Number(postId)),
     {
       enabled: false,
     }

@@ -10,7 +10,8 @@ export const fetchUsers = async ({ pageParam = 0 }) => {
 };
 
 
-export const fetchUserDetails = async (userId: string) => {
+export const fetchUserDetails = async (userId: number) => {
   const response = await client.get(urls.users.details(userId));
+  console.log(response.data)
   return response.data;
 };

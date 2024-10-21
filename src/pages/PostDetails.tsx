@@ -7,14 +7,14 @@ import { IComment } from '../types';
 
 const PostDetails = () => {
   const { postId } = useParams(); 
-  const { data, isLoading, isError } = useQuery(['post', postId], () => fetchPostDetails(postId!));
+  const { data, isLoading, isError } = useQuery(['post', postId], () => fetchPostDetails(Number(postId!)));
   
   const [showComments, setShowComments] = useState(false);
 
   // get comments  
   const { data: comments, isLoading: isCommentsLoading, isError: isCommentsError, refetch } = useQuery(
     ['comments', postId],
-    () => fetchPostComments(postId!),
+    () => fetchPostComments(Number(postId)),  
     { enabled: false }
   );
 

@@ -11,13 +11,13 @@ const UserDetails = () => {
   //get user details
   const { data: user, isLoading: isUserLoading, isError: isUserError } = useQuery(
     ['user', userId],
-    () => fetchUserDetails(userId!)
+    () => fetchUserDetails(Number(userId)) 
   );
 
   // get user post
   const { data: posts, isLoading: isPostsLoading, isError: isPostsError } = useQuery(
     ['userPosts', userId],
-    () => fetchUserPosts(userId!)
+    () => fetchUserPosts(Number(userId)) 
   );
 
   if (isUserLoading || isPostsLoading) return <div className='text-white'>Loading...</div>;

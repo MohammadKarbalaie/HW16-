@@ -3,11 +3,6 @@ export interface IResDto {
     limit: number;
     total: number;
   }
-  
-  export interface IPagination {
-    skip?: number;
-    limit?: number;
-  }
 
 export interface IPost {
     id: number;
