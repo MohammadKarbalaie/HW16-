@@ -25,8 +25,8 @@ const PostDetails = () => {
     }
   };
 
-  if (isLoading) return <div className='text-white'>Loading...</div>;
-  if (isError) return <div className='text-white'>Error loading post details</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error loading post details</div>;
 
   return (
     <div className='border px-4 py-2 rounded-xl w-[800px] mx-auto bg-white'>
@@ -50,8 +50,8 @@ const PostDetails = () => {
 
       {showComments && (
         <div className="mt-4">
-          {isCommentsLoading && <div className='text-white'>Loading comments...</div>}
-          {isCommentsError && <div className='text-white'>Error loading comments</div>}
+          {isCommentsLoading && <div>Loading comments...</div>}
+          {isCommentsError && <div>Error loading comments</div>}
           {comments && (
             <ul>
               {comments.map((comment: IComment) => (

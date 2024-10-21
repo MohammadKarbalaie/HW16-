@@ -30,12 +30,12 @@ const UsersList = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [fetchNextPage, hasNextPage, isFetchingNextPage]);
 
-  if (isLoading) return <div className='text-white'>Loading...</div>;
-  if (isError) return <div className='text-white'>Error loading users</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error loading users</div>;
 
   return (
     <div className='w-[1420px] mx-auto h-auto'>
-      <h1 className="text-2xl font-bold mb-4 text-white">Users List</h1>
+      <h1 className="text-2xl font-bold mb-4">Users List</h1>
       <ul>
         {data?.pages.map((page, pageIndex) => (
           <div key={pageIndex} className='w-9/12  grid grid-cols-2 gap-4 items-center justify-center mx-auto'>
@@ -45,8 +45,8 @@ const UsersList = () => {
           </div>
         ))}
       </ul>
-      {isFetchingNextPage && <div className='text-white'>Loading more...</div>}
-      {!hasNextPage && <div className='text-white text-2xl pt-10'>No more users to load</div>}
+      {isFetchingNextPage && <div>Loading more...</div>}
+      {!hasNextPage && <div className='text-2xl pt-10'>No more users to load</div>}
     </div>
   );
 };

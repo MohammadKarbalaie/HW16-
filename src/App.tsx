@@ -15,11 +15,11 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <div className='w-[1440px] mx-auto bg-[#17223e] '>
+        <div className='w-[1440px] mx-auto '>
           <Navbar />
           <main className="p-4">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<Home />}  />
               {/* Route for Users List */}
               <Route path="/users" element={<UsersList />} />
               {/* Route for User Details */}

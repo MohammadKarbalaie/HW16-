@@ -28,7 +28,7 @@ const UserDetails = () => {
       <h1 className="flex items-center gap-4 text-2xl font-bold mb-4"><img src={user.image} alt={user.firstName} /><p className='text-white'>{user.firstName} {user.lastName}</p></h1>
 
       {/* list user posts*/}
-      <h2 className="text-xl mb-2 text-white">Posts by {user.firstName}:</h2>
+      <h2 className="text-xl mb-2">Posts by {user.firstName}:</h2>
       <ul>
         {posts.map((post:IPost) => (
           <li key={post.id} className='bg-white rounded-xl'>
