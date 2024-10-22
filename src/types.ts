@@ -1,9 +1,3 @@
-export interface IResDto {
-    skip: number;
-    limit: number;
-    total: number;
-  }
-
 export interface IPost {
     id: number;
     title: string;
