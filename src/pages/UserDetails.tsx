@@ -25,7 +25,7 @@ const UserDetails = () => {
 
   return (
     <div className="user-details">
-      <h1 className="flex items-center gap-4 text-2xl font-bold mb-4"><img src={user.image} alt={user.firstName} /><p className='text-white'>{user.firstName} {user.lastName}</p></h1>
+      <h1 className="flex items-center gap-4 text-2xl font-bold mb-4"><img src={user.image} alt={user.firstName} /><p>{user.firstName} {user.lastName}</p></h1>
 
       {/* list user posts*/}
       <h2 className="text-xl mb-2">Posts by {user.firstName}:</h2>
