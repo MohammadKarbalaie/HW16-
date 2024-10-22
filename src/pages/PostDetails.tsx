@@ -35,14 +35,14 @@ const PostDetails = () => {
 
       <div className='flex gap-8'>
         <div className='flex gap-6 my-4'>
-          <p className='flex gap-4'><span className='text-xl'><AiFillLike /></span><span>{data.reactions.likes}</span></p>
-          <p className='flex gap-4'><span className='text-xl'><AiFillDislike /></span><span>{data.reactions.dislikes}</span></p>
-          <p className='flex gap-4'><span className='text-xl'><AiTwotoneTags /></span><span>{data.tags + ""}</span></p>
-          <p className='flex gap-4'><span className='text-xl'><AiTwotoneEye /></span><span>{data.views}</span></p>
+          <p className='flex gap-1 hover:text-sky-400 cursor-pointer'><span className='text-xl'><AiFillLike /></span><span>{data.reactions.likes}</span></p>
+          <p className='flex gap-1 hover:text-sky-400 cursor-pointer'><span className='text-xl'><AiFillDislike /></span><span>{data.reactions.dislikes}</span></p>
+          <p className='flex gap-1 hover:text-sky-400 cursor-pointer'><span className='text-xl'><AiTwotoneTags /></span><span>{data.tags + ""}</span></p>
+          <p className='flex gap-1 hover:text-sky-400 cursor-pointer'><span className='text-xl'><AiTwotoneEye /></span><span>{data.views}</span></p>
         </div>
-        <button className="mt-0 text-gray-500  rounded" onClick={handleShowComments}>
+        <button className="mt-0 text-gray-500 hover:text-sky-400 rounded" onClick={handleShowComments}>
           <div className='flex gap-2'>
-            <AiOutlineComment className='mt-[3px] text-xl' />
+            <AiOutlineComment className='mt-[3px] text-xl hover:text-sky-400' />
             {showComments ? 'Hide Comments' : 'Show Comments'}
           </div>
         </button>

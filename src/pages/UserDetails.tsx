@@ -8,13 +8,13 @@ import { IPost } from '../types';
 const UserDetails = () => {
   const { userId } = useParams(); 
 
-  //get user details
+ 
   const { data: user, isLoading: isUserLoading, isError: isUserError } = useQuery(
     ['user', userId],
     () => fetchUserDetails(Number(userId)) 
   );
 
-  // get user post
+
   const { data: posts, isLoading: isPostsLoading, isError: isPostsError } = useQuery(
     ['userPosts', userId],
     () => fetchUserPosts(Number(userId)) 
@@ -25,17 +25,23 @@ const UserDetails = () => {
 
   return (
     <div className="user-details">
-      <h1 className="flex items-center gap-4 text-2xl font-bold mb-4"><img src={user.image} alt={user.firstName} /><p>{user.firstName} {user.lastName}</p></h1>
+      <h1 className="flex items-center gap-4 text-2xl font-bold mb-4">
+        <img src={user.image} alt={user.firstName} />
+        <p>{user.firstName} {user.lastName}</p>
+      </h1>
 
-      {/* list user posts*/}
       <h2 className="text-xl mb-2">Posts by {user.firstName}:</h2>
-      <ul>
-        {posts.map((post:IPost) => (
-          <li key={post.id} className='bg-white rounded-xl'>
-            <PostCard post={post} /> 
-          </li>
-        ))}
-      </ul>
+      {posts.length === 0 ? (
+        <p className="text-black">no posts.</p>
+      ) : (
+        <ul>
+          {posts.map((post: IPost) => (
+            <li key={post.id} className='bg-white rounded-xl'>
+              <PostCard post={post} /> 
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 const Home = () => {
     return (
-      <header className="relative -mt-4 w-[1440px] -ml-4 h-[1200px] -mb-64">
+      <header className="relative bg-gray-900 -mt-4 w-[1440px] -ml-4 h-[1200px] -mb-64">
       <img src="https://uploads-ssl.webflow.com/646f65e37fe0275cfb808405/646f66cdeeb4ddfdae25a26e_Background%20Hero.svg" alt="" className="absolute -z-10 inline-block h-full w-full object-cover" />
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
         <div className="mx-auto max-w-3xl text-center">
